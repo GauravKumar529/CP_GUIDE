@@ -1,0 +1,114 @@
+// 🔥 CP Template for Fast Coding and Debugging 🔥
+#include <bits/stdc++.h>
+using namespace std;
+
+// ----------------------- PBDS (ordered_set) ---------------------
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
+using namespace __gnu_pbds;
+template<typename T>
+using ordered_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
+// ordered_set<int> s; s.insert(4); *s.find_by_order(0); s.order_of_key(5);
+
+// ---------------------- Typedefs and Macros ---------------------
+#define int long long
+#define endl '\n'
+#define all(v) (v).begin(), (v).end()
+#define rall(v) (v).rbegin(), (v).rend()
+#define pb push_back
+#define ff first
+#define ss second
+#define vi vector<int>
+#define pii pair<int, int>
+#define vpi vector<pair<int,int>>
+#define yes cout << "YES\n"
+#define no cout << "NO\n"
+
+// ---------------------- Fast IO ---------------------
+void fastIO() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+}
+
+// ---------------------- Random Number Generator ---------------------
+mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
+int getRand(int l, int r) {
+    return uniform_int_distribution<int>(l, r)(rng);
+}
+
+// ---------------------- Modular Arithmetic (Optional) ---------------------
+const int MOD = 1e9 + 7;
+int mod_add(int a, int b) { return (a % MOD + b % MOD) % MOD; }
+int mod_sub(int a, int b) { return (a % MOD - b % MOD + MOD) % MOD; }
+int mod_mul(int a, int b) { return ((a % MOD) * (b % MOD)) % MOD; }
+int mod_pow(int a, int b) {
+    int res = 1;
+    while (b) {
+        if (b & 1) res = mod_mul(res, a);
+        a = mod_mul(a, a);
+        b >>= 1;
+    }
+    return res;
+}
+int mod_inv(int a) { return mod_pow(a, MOD - 2); }
+
+// ---------------------- Timer ---------------------
+chrono::time_point<chrono::high_resolution_clock> start_time;
+void startTimer() {
+    start_time = chrono::high_resolution_clock::now();
+}
+void endTimer() {
+    auto end_time = chrono::high_resolution_clock::now();
+    auto duration = chrono::duration_cast<chrono::milliseconds>(end_time - start_time).count();
+    cerr << "⏱️ Time taken: " << duration << " ms" << endl;
+}
+
+// ---------------------- Debug Tool ---------------------
+#ifndef ONLINE_JUDGE
+#define debug(x) cerr << #x << " = "; _print(x); cerr << endl;
+#else
+#define debug(x)
+#endif
+
+void _print(int x) { cerr << x; }
+void _print(string x) { cerr << x; }
+void _print(char x) { cerr << x; }
+void _print(double x) { cerr << x; }
+template<typename T, typename V> void _print(pair<T, V> p) {
+    cerr << "{"; _print(p.ff); cerr << ", "; _print(p.ss); cerr << "}"; 
+}
+template<typename T> void _print(vector<T> v) {
+    cerr << "["; for (auto i : v) {_print(i); cerr << " ";} cerr << "]";
+}
+template<typename T> void _print(set<T> v) {
+    cerr << "["; for (auto i : v) {_print(i); cerr << " ";} cerr << "]";
+}
+template<typename T, typename V> void _print(map<T, V> v) {
+    cerr << "[ "; for (auto i : v) {_print(i); cerr << " ";} cerr << "]";
+}
+
+// ---------------------- Main Code ---------------------
+void solve() {
+    // 🔥 Write your solution logic here
+}
+
+int32_t main() {
+    fastIO();
+#ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);    // For local testing
+    freopen("output.txt", "w", stdout);
+    freopen("error.txt", "w", stderr);
+#endif
+
+    //startTimer();
+    
+    int t = 1;
+    // cin >> t;
+    while (t--) {
+        solve();
+    }
+
+    //endTimer();
+    return 0;
+}
