@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+#define int long long
+#define endl '\n'
+#define vi vector<int>
+#define pb push_back
+#define all(x) (x).begin(), (x).end()
+
+void solve() {
+    // write your logic here
+    int n;
+    cin >> n;
+    vi a(n);
+    for (int &x : a) cin >> x;
+    sort(all(a));
+    cout << "Sorted: ";
+    for (int x : a) cout << x << ' ';
+    cout << endl;
+}
+
+int32_t main() {
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+
+    int t = 1;
+    //cin >> t; // uncomment if multiple testcases
+    while (t--) solve();
+    return 0;
+}
