@@ -1,8 +1,7 @@
-// 🔥 CP Template for Fast Coding and Debugging 🔥
+
 #include <bits/stdc++.h>
 using namespace std;
 
-// ----------------------- PBDS (ordered_set) ---------------------
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
 using namespace __gnu_pbds;
@@ -10,7 +9,7 @@ template<typename T>
 using ordered_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
 // ordered_set<int> s; s.insert(4); *s.find_by_order(0); s.order_of_key(5);
 
-// ---------------------- Typedefs and Macros ---------------------
+
 #define int long long
 #define endl '\n'
 #define all(v) (v).begin(), (v).end()
@@ -61,7 +60,7 @@ void startTimer() {
 void endTimer() {
     auto end_time = chrono::high_resolution_clock::now();
     auto duration = chrono::duration_cast<chrono::milliseconds>(end_time - start_time).count();
-    cerr << "⏱️ Time taken: " << duration << " ms" << endl;
+    cerr << " Time taken: " << duration << " ms" << endl;
 }
 
 // ---------------------- Debug Tool ---------------------
@@ -90,7 +89,7 @@ template<typename T, typename V> void _print(map<T, V> v) {
 
 // ---------------------- Main Code ---------------------
 void solve() {
-    // 🔥 Write your solution logic here
+    // Write your solution logic here
 }
 
 int32_t main() {
