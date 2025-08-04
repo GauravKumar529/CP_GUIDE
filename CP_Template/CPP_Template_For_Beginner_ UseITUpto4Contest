@@ -9,14 +9,6 @@ using namespace std;
 
 void solve() {
     // write your logic here
-    int n;
-    cin >> n;
-    vi a(n);
-    for (int &x : a) cin >> x;
-    sort(all(a));
-    cout << "Sorted: ";
-    for (int x : a) cout << x << ' ';
-    cout << endl;
 }
 
 int32_t main() {
